@@ -1,3 +1,4 @@
+import { CSSProperties, useState } from "react"
 import styled from "styled-components"
 
 const Layout = styled.div`
@@ -24,8 +25,34 @@ const Points = styled.div`
   border-radius: 50%;
 `
 
-export default function App() {
+function Ball() {
 
+  const [clicked, setClicked] = useState(0)
+  const maxCount = 4
+
+  const style: CSSProperties = {
+    background: "red",
+    width: 50 + "px",
+    height: 50 + "px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: "50%",
+    /* position: "absolute", */
+    userSelect: "none",
+    cursor: "pointer"
+  }
+
+  if(clicked >= maxCount){
+    return <div>X</div>
+  }
+
+  return <>
+    <div style={style} onClick={()=> setClicked(clicked + 1)}> {clicked} </div>
+  </>
+}
+
+export default function App() {
   return (
     <>
       <Layout>
@@ -33,6 +60,8 @@ export default function App() {
           <HomeButton>Koti</HomeButton>
           <Points></Points>
         </Navigation>
+        <Ball></Ball>
+        <Ball></Ball>
       </Layout>
     </>
   )
