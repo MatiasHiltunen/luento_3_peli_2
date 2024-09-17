@@ -4,6 +4,7 @@
 - Tarvitaan supabase-projekti: https://supabase.com/
 
 Luotiin taulu "ranking" seuraavalla schemalla:
+|columns|type||
 |---|---|---|
 |id | int8 | primary (ei muutettu)|
 |created_at|timestapmz| (ei muutettu)|
