@@ -13,7 +13,7 @@ Luotiin taulu "ranking" seuraavalla schemalla:
 
 - Asennettiin react-projektiin supabase-client https://supabase.com/docs/reference/javascript/introduction
 
-- Supabasen API Docs-osiossa generoitiin typescript tyypit tietokannasta > /src/aservices/supabase.ts
+- Supabasen API Docs-osiossa generoitiin typescript tyypit tietokannasta > /src/services/supabase.ts
 
 - Lisää tarvittavat tiedot omasta supabase-projektista (ks. API Docs supabase-projektissa) tiedostoon /src/supabase_client.ts
 
